@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: clamp(14px, 0.729vw, 21px);
 }
 
 body {
@@ -102,7 +103,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 2.5rem 4rem;
+  padding: 6rem 2.5rem 3rem;
   overflow: hidden;
 }
 
@@ -117,9 +118,9 @@ body {
 
 .hero-content {
   position: relative;
-  max-width: 1400px;
+  max-width: 78.5rem;
   width: 100%;
-  padding: 0 2.5rem;
+  padding: 0 2rem;
 }
 
 .hero-inner {
@@ -134,7 +135,7 @@ body {
 
 .hero-headshot {
   flex-shrink: 0;
-  width: 340px;
+  width: 280px;
   align-self: stretch;
   border-radius: 16px;
   overflow: hidden;
@@ -165,7 +166,7 @@ body {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.03em;
@@ -265,9 +266,9 @@ body {
 
 /* ── Sections ── */
 .section {
-  max-width: 1400px;
+  max-width: 78.5rem;
   margin: 0 auto;
-  padding: 6rem 2.5rem;
+  padding: 4rem 2rem;
 }
 
 .section-label {
@@ -281,7 +282,7 @@ body {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 3rem;
@@ -291,7 +292,7 @@ body {
 .project-list {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 2.5rem;
 }
 
 .project-card {
@@ -392,7 +393,7 @@ body {
 }
 
 .project-info {
-  padding: 2.5rem 2.5rem;
+  padding: 1.75rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -400,7 +401,7 @@ body {
 
 .project-info h4 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
@@ -419,7 +420,7 @@ body {
 .project-role {
   color: var(--accent) !important;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   margin-bottom: 1.25rem;
   letter-spacing: 0.01em;
 }
@@ -460,8 +461,8 @@ body {
 }
 
 .btn-sm {
-  padding: 0.85rem 2rem;
-  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
   align-self: flex-start;
 }
 

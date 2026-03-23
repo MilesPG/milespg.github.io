@@ -1,6 +1,6 @@
 Results
 
-I am so incredibly proud of our team for creating the game in only a year of development. In that time, we were able to all of the following:
+I am so incredibly proud of our team for creating the game in only a year of development. In that time, we were able to achieve all of the following:
 
 Have a fully networked and cross platform game with IOS, Android, Mac, and PC
 Have over 100 fully unique full art cards
