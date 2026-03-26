@@ -18,7 +18,7 @@ The USC Games Expo is an annual showcase event hosted by the USC Games program. 
 
 My Role
 
-As Project Manager, I am responsible for the overall success of the USC Games Expo by assisting the Expo Director. Together we have successfully built and maintained a thriving expo that has been the culmination of year's worth of student games.
+As Project Manager, I am responsible for the overall success of the USC Games Expo by assisting the Expo Director. Together we have successfully built and maintained a thriving expo that has been the culmination of a year's worth of student games.
 
 
 
@@ -51,7 +51,7 @@ Although USC is incredibly fortunate to have the resources to put on an event of
 Limited Resources Include:
 
 * Space for booths
-* TVs to displaying games
+* TVs for displaying games
 * Computer monitors
 * Gaming systems
 
@@ -89,7 +89,7 @@ Potential Ideas to Improve:
 
 &#x20;- **Results**
 
-The USC Games Expo has seen steady growth in submitted projects, participating jury members, and number of attendees. I believe this is a result of the hard work and dedication that my team has to this amazing showcase of our student's work. Having this consistent expo allows our students to look forward to participating in a day dedicated to the community they belong to, alumni an invent to bookmark to see how their alma mater is growing, and industry professionals a chance to see the amazing talent of our students in action.
+The USC Games Expo has seen steady growth in submitted projects, participating jury members, and number of attendees. I believe this is a result of the hard work and dedication that my team has to this amazing showcase of our student's work. Having this consistent expo allows our students to look forward to participating in a day dedicated to the community they belong to, alumni an event to bookmark to see how their alma mater is growing, and industry professionals a chance to see the amazing talent of our students in action.
 
 
 
