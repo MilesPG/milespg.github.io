@@ -89,7 +89,7 @@ Potential Ideas to Improve:
 
 &#x20;- **Results**
 
-Insert results here
+The USC Games Expo has seen steady growth in submitted projects, participating jury members, and number of attendees. I believe this is a result of the hard work and dedication that my team has to this amazing showcase of our student's work. Having this consistent expo allows our students to look forward to participating in a day dedicated to the community they belong to, alumni an invent to bookmark to see how their alma mater is growing, and industry professionals a chance to see the amazing talent of our students in action.
 
 
 

@@ -11,7 +11,7 @@
   <style>
     .project-hero {
       padding: 8rem 2.5rem 4rem;
-      max-width: 78.5rem;
+      max-width: 1400px;
       margin: 0 auto;
     }
     .project-hero .project-tag {
@@ -21,32 +21,32 @@
     }
     .project-hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
     }
     .project-hero .lead {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 1.225rem;
       line-height: 1.7;
       max-width: 640px;
       margin-bottom: 2rem;
     }
     .project-body {
-      max-width: 78.5rem;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 2.5rem 6rem;
     }
     .project-body h2 {
       font-family: var(--font-display);
-      font-size: 1.4rem;
+      font-size: 1.75rem;
       font-weight: 700;
       margin: 2.5rem 0 1rem;
     }
     .project-body p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 1.125rem;
       line-height: 1.8;
       margin-bottom: 1rem;
     }
@@ -63,52 +63,74 @@
     }
     .back-link:hover { color: var(--accent-hover); }
 
+    .tt-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .tt-gallery img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .tt-gallery img:hover {
+      transform: scale(1.02);
+    }
+
     @media (max-width: 768px) {
       .project-hero { padding: 6rem 1.5rem 2rem; }
       .project-body { padding: 0 1.5rem 4rem; }
+      .tt-gallery { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <a href="../index.html" class="nav-logo">Miles Gonzales</a>
-    <ul class="nav-links">
-      <li><a href="../index.html#projects">Projects</a></li>
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
   </nav>
 
   <!-- ── Hero ── -->
   <section class="project-hero">
     <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
-    <span class="project-tag">Game Design</span>
+    <div class="project-tags" style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+      <span class="project-tag">Game Design</span>
+      <span class="project-tag">Production</span>
+    </div>
     <h1>Tower Tagger</h1>
-    <p class="project-role" style="color: var(--text); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem;">Solo Developer</p>
-    <p class="lead">Description coming soon.</p>
+    <p class="project-role" style="color: var(--text); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Solo Developer</p>
+    <p class="lead">A graffiti-themed tower climbing game developed as a solo project.</p>
+    <p style="color: var(--text-muted); font-size: 1.125rem; margin-bottom: 1rem;"><strong style="color: var(--text);">Tools and Skills Used:</strong> Design, Managed Outsourcing, Time Management, Conducted Feedback</p>
+    <img src="../Resources/Tower%20Tagger/Graffiti%20Clip.gif" alt="Tower Tagger" style="width: 100%; border-radius: 12px; margin-bottom: 3rem;">
   </section>
 
   <div class="project-body" style="padding-top: 0;">
     <h2>Overview</h2>
-    <p>Details coming soon.</p>
+    <p>Tower Tagger is a graffiti-themed tower climbing game where players scale urban environments while leaving their mark. As the sole developer, I was responsible for every aspect of the project from design through production.</p>
 
     <h2>My Role</h2>
-    <p>As the sole developer on this project, I was responsible for every aspect of development from concept to completion.</p>
+    <p>As the solo developer on Tower Tagger, I wore every hat — designing the core gameplay, managing outsourced assets, maintaining a development timeline, and conducting feedback sessions to refine the experience.</p>
+    <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 1rem 0 0.5rem; color: var(--text);">Responsibilities</h3>
+    <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text); margin-bottom: 1rem; font-size: 1.125rem; line-height: 1.8;">
+      <li>Design &mdash; conceptualized and iterated on the core gameplay mechanics and level design</li>
+      <li>Managed outsourcing &mdash; coordinated with external artists and contractors for asset creation</li>
+      <li>Time management &mdash; maintained a production schedule to hit key milestones</li>
+      <li>Conducted feedback &mdash; organized and ran playtesting sessions to gather player insights</li>
+    </ul>
 
-    <h2>Challenges</h2>
-    <p>Details coming soon.</p>
-
-    <h2>Results</h2>
-    <p>Details coming soon.</p>
+    <h2>Gallery</h2>
+    <div class="tt-gallery">
+      <img src="../Resources/Tower%20Tagger/Graffiti%20Clip.gif" alt="Tower Tagger Graffiti">
+      <img src="../Resources/Tower%20Tagger/Ferx%20News.gif" alt="Tower Tagger Ferx News">
+      <img src="../Resources/Tower%20Tagger/Main%20Menu.png" alt="Tower Tagger Main Menu">
+      <img src="../Resources/Tower%20Tagger/Jumping.png" alt="Tower Tagger Jumping">
+    </div>
   </div>
 
   <footer class="footer">
-    <p>&copy; 2026 Miles Gonzales</p>
+    <p>&copy; 2025 Miles Gonzales</p>
   </footer>
-
-  <script src="../script.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
   <style>
     .project-hero {
       padding: 8rem 2.5rem 4rem;
-      max-width: 78.5rem;
+      max-width: 1400px;
       margin: 0 auto;
     }
     .project-hero .project-tag {
@@ -21,32 +21,32 @@
     }
     .project-hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
     }
     .project-hero .lead {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 1.225rem;
       line-height: 1.7;
       max-width: 640px;
       margin-bottom: 2rem;
     }
     .project-body {
-      max-width: 78.5rem;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 2.5rem 6rem;
     }
     .project-body h2 {
       font-family: var(--font-display);
-      font-size: 1.4rem;
+      font-size: 1.75rem;
       font-weight: 700;
       margin: 2.5rem 0 1rem;
     }
     .project-body p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 1.125rem;
       line-height: 1.8;
       margin-bottom: 1rem;
     }
@@ -85,19 +85,17 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       margin: 2rem 0;
-      align-items: stretch;
+      align-items: start;
     }
     .challenge-pillar {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
     }
     .challenge-pillar h3 {
       font-family: var(--font-display);
-      font-size: 1.15rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: var(--text);
       margin: 0 0 0.75rem;
@@ -118,7 +116,7 @@
       line-height: 1.8;
     }
     .challenge-dropdown {
-      margin-top: auto;
+      margin-top: 0.75rem;
       overflow: hidden;
     }
     .challenge-dropdown-toggle {
@@ -172,11 +170,99 @@
       border-color: #fff;
     }
 
+    /* Graph tooltip styles */
+    .graph-tooltip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      min-width: 200px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+      animation: tooltipFadeIn 0.25s ease;
+    }
+    @keyframes tooltipFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .graph-tooltip-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .graph-tooltip-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0.3rem 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .graph-tooltip-row:last-child { border-bottom: none; }
+    .graph-tooltip-row strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .graph-point:hover circle:last-child {
+      fill: var(--accent);
+      transition: fill 0.2s;
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .lightbox.open {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      object-fit: contain;
+      cursor: default;
+      animation: lightboxFadeIn 0.3s ease;
+    }
+    @keyframes lightboxFadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2.5rem;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .lightbox-close:hover {
+      opacity: 1;
+    }
+
     @media (max-width: 768px) {
       .project-hero { padding: 6rem 1.5rem 2rem; }
       .project-body { padding: 0 1.5rem 4rem; }
       .expo-gallery { grid-template-columns: repeat(2, 1fr); }
       .challenge-pillars { grid-template-columns: 1fr; }
+      .graph-tooltip { min-width: 170px; font-size: 0.9rem; }
+      .graph-wrapper { flex-direction: column; }
+      .graph-tooltip-panel { width: 100% !important; }
     }
   </style>
 </head>
@@ -190,9 +276,9 @@
     <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
     <span class="project-tag">Project Management</span>
     <h1>USC Games Expo</h1>
-    <p class="project-role" style="color: var(--text); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem;">Project Manager</p>
+    <p class="project-role" style="color: var(--text); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Project Manager</p>
     <p class="lead">The USC Games Expo is USC's annual showcase of student and alumni games.</p>
-    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;"><strong style="color: var(--text);">Tools and Skills Used:</strong> Excel Sheets, Zoom meetings, Collaboration, Soft skills</p>
+    <p style="color: var(--text-muted); font-size: 1.125rem; margin-bottom: 1rem;"><strong style="color: var(--text);">Tools and Skills Used:</strong> Excel Sheets, Zoom meetings, Collaboration, Soft skills</p>
     <div style="margin-bottom: 2rem;">
       <a href="https://www.uscgamesexpo.com/" class="btn btn-outline" target="_blank" rel="noopener">Expo Website</a>
     </div>
@@ -205,8 +291,8 @@
 
     <h2>My Role</h2>
     <p>As Project Manager, I am responsible for the overall success of the USC Games Expo by assisting the Expo Director. Together we have successfully built and maintained a thriving expo that has been the culmination of year's worth of student games.</p>
-    <h3 style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin: 1rem 0 0.5rem; color: var(--text);">Responsibilities</h3>
-    <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text); margin-bottom: 1rem; font-size: 0.88rem; line-height: 1.7;">
+    <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 1rem 0 0.5rem; color: var(--text);">Responsibilities</h3>
+    <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text); margin-bottom: 1rem; font-size: 1.125rem; line-height: 1.8;">
       <li>Scheduling and coordination &mdash; managed, assigned, and assisted a group of 50+ jury members in judging student submissions for this expo</li>
       <li>Expo layout design &mdash; created layouts of the expo grounds which incorporated over 80 booths from varying parties all within site regulations</li>
       <li>Managed showcases &mdash; directly oversaw the successful showcase of our games in a sneak preview to potential new university students, industry personnel, and educators</li>
@@ -265,17 +351,91 @@
     </div>
 
     <h2>Results</h2>
-    <p>Insert results here</p>
+
+    <div class="graph-wrapper" style="display: flex; align-items: flex-start; justify-content: center; gap: 2rem; margin: 2rem auto; max-width: 1000px;">
+      <div class="graph-container" style="position: relative; flex: 1; max-width: 700px;">
+        <svg id="expo-graph" viewBox="0 0 700 400" style="width: 100%; height: auto; overflow: visible;">
+          <!-- Background grid lines -->
+          <line x1="100" y1="50" x2="100" y2="320" stroke="var(--border)" stroke-width="1"/>
+          <line x1="100" y1="320" x2="650" y2="320" stroke="var(--border)" stroke-width="1"/>
+          <!-- Horizontal grid lines -->
+          <line x1="100" y1="185" x2="650" y2="185" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="6,4"/>
+          <line x1="100" y1="120" x2="650" y2="120" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="6,4"/>
+          <line x1="100" y1="250" x2="650" y2="250" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="6,4"/>
+
+          <!-- Y-axis label -->
+          <text x="40" y="190" fill="var(--text-muted)" font-size="13" font-family="var(--font-body)" text-anchor="middle" transform="rotate(-90, 40, 190)">Expo Growth</text>
+
+          <!-- X-axis labels -->
+          <text x="200" y="355" fill="var(--text)" font-size="15" font-family="var(--font-display)" font-weight="600" text-anchor="middle">2024</text>
+          <text x="375" y="355" fill="var(--text)" font-size="15" font-family="var(--font-display)" font-weight="600" text-anchor="middle">2025</text>
+          <text x="550" y="355" fill="var(--text)" font-size="15" font-family="var(--font-display)" font-weight="600" text-anchor="middle">2026</text>
+
+          <!-- Trend line -->
+          <polyline points="200,270 375,190 550,95" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+          <!-- Clickable points -->
+          <g class="graph-point" data-year="2024" style="cursor: pointer;" onclick="toggleGraphTooltip(this)">
+            <circle cx="200" cy="270" r="20" fill="transparent"/>
+            <circle cx="200" cy="270" r="8" fill="var(--bg)" stroke="var(--accent)" stroke-width="3"/>
+          </g>
+          <g class="graph-point" data-year="2025" style="cursor: pointer;" onclick="toggleGraphTooltip(this)">
+            <circle cx="375" cy="190" r="20" fill="transparent"/>
+            <circle cx="375" cy="190" r="8" fill="var(--bg)" stroke="var(--accent)" stroke-width="3"/>
+          </g>
+          <g class="graph-point" data-year="2026" style="cursor: pointer;" onclick="toggleGraphTooltip(this)">
+            <circle cx="550" cy="95" r="20" fill="transparent"/>
+            <circle cx="550" cy="95" r="8" fill="var(--bg)" stroke="var(--accent)" stroke-width="3"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Tooltip panel on the right side of the graph -->
+      <div class="graph-tooltip-panel" style="width: 280px; flex-shrink: 0;">
+        <div id="tooltip-placeholder" class="graph-tooltip" style="display:block; opacity: 0.5;">
+          <div class="graph-tooltip-title" style="color: var(--text-muted);">Select a year</div>
+          <div class="graph-tooltip-row"><span>Submitted Projects</span><strong>—</strong></div>
+          <div class="graph-tooltip-row"><span>Jurors</span><strong>—</strong></div>
+          <div class="graph-tooltip-row"><span>Attendees</span><strong>—</strong></div>
+        </div>
+        <div id="tooltip-2024" class="graph-tooltip" style="display:none;">
+          <div class="graph-tooltip-title">2024</div>
+          <div class="graph-tooltip-row"><span>Submitted Projects</span><strong>62</strong></div>
+          <div class="graph-tooltip-row"><span>Jurors</span><strong>25</strong></div>
+          <div class="graph-tooltip-row"><span>Attendees</span><strong>1,700</strong></div>
+        </div>
+        <div id="tooltip-2025" class="graph-tooltip" style="display:none;">
+          <div class="graph-tooltip-title">2025</div>
+          <div class="graph-tooltip-row"><span>Submitted Projects</span><strong>77</strong></div>
+          <div class="graph-tooltip-row"><span>Jurors</span><strong>30</strong></div>
+          <div class="graph-tooltip-row"><span>Attendees</span><strong>2,000</strong></div>
+        </div>
+        <div id="tooltip-2026" class="graph-tooltip" style="display:none;">
+          <div class="graph-tooltip-title">2026</div>
+          <div class="graph-tooltip-row"><span>Submitted Projects</span><strong>85</strong></div>
+          <div class="graph-tooltip-row"><span>Jurors</span><strong>60</strong></div>
+          <div class="graph-tooltip-row"><span>Attendees</span><strong style="text-align: right;">2,400<br><span style="font-size: 0.8rem; font-weight: 400; color: var(--text-muted);">(projected)</span></strong></div>
+        </div>
+      </div>
+    </div>
+
+    <p>The USC Games Expo has seen steady growth in submitted projects, participating jury members, and number of attendees. I believe this is a result of the hard work and dedication that my team has to this amazing showcase of our student's work. Having this consistent expo allows our students to look forward to participating in a day dedicated to the community they belong to, alumni an invent to bookmark to see how their alma mater is growing, and industry professionals a chance to see the amazing talent of our students in action.</p>
 
     <h2>Gallery</h2>
     <div class="expo-gallery">
-      <img src="../Resources/USC%20Games%20Expo/IMG_7808.jpg" alt="USC Games Expo">
-      <img src="../Resources/USC%20Games%20Expo/IMG_7809.jpg" alt="USC Games Expo">
-      <img src="../Resources/USC%20Games%20Expo/IMG_7813.jpg" alt="USC Games Expo">
-      <img src="../Resources/USC%20Games%20Expo/IMG_7816.jpg" alt="USC Games Expo">
-      <img src="../Resources/USC%20Games%20Expo/IMG_7817.jpg" alt="USC Games Expo">
-      <img src="../Resources/USC%20Games%20Expo/IMG_7818.jpg" alt="USC Games Expo">
+      <img src="../Resources/USC%20Games%20Expo/IMG_7808.jpg" alt="USC Games Expo" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/USC%20Games%20Expo/IMG_7809.jpg" alt="USC Games Expo" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/USC%20Games%20Expo/IMG_7813.jpg" alt="USC Games Expo" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/USC%20Games%20Expo/IMG_7816.jpg" alt="USC Games Expo" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/USC%20Games%20Expo/IMG_7817.jpg" alt="USC Games Expo" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/USC%20Games%20Expo/IMG_7818.jpg" alt="USC Games Expo" onclick="openLightbox(this.src)" style="cursor: pointer;">
     </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <img id="lightbox-img" src="" alt="Gallery image">
   </div>
 
   <footer class="footer">
@@ -287,6 +447,54 @@
       btn.classList.toggle('open');
       btn.nextElementSibling.classList.toggle('open');
     }
+
+    function toggleGraphTooltip(pointEl) {
+      const year = pointEl.getAttribute('data-year');
+      const tooltip = document.getElementById('tooltip-' + year);
+      const placeholder = document.getElementById('tooltip-placeholder');
+      const isVisible = tooltip.style.display === 'block';
+
+      // Hide all year tooltips and reset points
+      document.querySelectorAll('.graph-tooltip-panel .graph-tooltip').forEach(t => t.style.display = 'none');
+      document.querySelectorAll('.graph-point circle:last-child').forEach(c => c.style.fill = '');
+
+      if (!isVisible) {
+        tooltip.style.display = 'block';
+        pointEl.querySelector('circle:last-child').style.fill = 'var(--accent)';
+      } else {
+        // Show placeholder when deselecting
+        placeholder.style.display = 'block';
+      }
+    }
+
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target === document.getElementById('lightbox') || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close tooltip when clicking outside the graph wrapper
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.graph-wrapper')) {
+        document.querySelectorAll('.graph-tooltip-panel .graph-tooltip').forEach(t => t.style.display = 'none');
+        document.getElementById('tooltip-placeholder').style.display = 'block';
+        document.querySelectorAll('.graph-point circle:last-child').forEach(c => c.style.fill = '');
+      }
+    });
   </script>
   <script src="../script.js"></script>
 </body>
