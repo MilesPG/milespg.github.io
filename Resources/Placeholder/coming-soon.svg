@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#0e0e11"/>
+  <rect x="1" y="1" width="1598" height="898" fill="none" stroke="#2a2a32" stroke-width="2"/>
+  <text x="800" y="450" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="56" fill="#4f8cff" letter-spacing="2">Images Coming Soon</text>
+</svg>
