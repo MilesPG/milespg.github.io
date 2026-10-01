@@ -61,7 +61,13 @@ document.querySelectorAll('.project-gallery').forEach(gallery => {
   thumbs.forEach(thumb => {
     thumb.addEventListener('click', () => {
       const idx = Number(thumb.dataset.img);
-      mainImages.forEach((img, i) => img.classList.toggle('active', i === idx));
+      mainImages.forEach((img, i) => {
+        const isActive = i === idx;
+        img.classList.toggle('active', isActive);
+        if (img.tagName === 'VIDEO') {
+          if (isActive) img.play(); else img.pause();
+        }
+      });
       thumbs.forEach((t, i) => t.classList.toggle('active', i === idx));
     });
   });

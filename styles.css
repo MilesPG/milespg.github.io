@@ -305,6 +305,10 @@ body {
   transition: border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
+.project-card.is-hidden {
+  display: none;
+}
+
 .project-card:hover {
   border-color: rgba(79, 140, 255, 0.2);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
@@ -341,6 +345,12 @@ body {
   opacity: 1;
 }
 
+video.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .gallery-thumbs {
   display: flex;
   flex-direction: row;
@@ -368,6 +378,23 @@ body {
 .gallery-thumb.active {
   border-color: var(--accent);
   opacity: 1;
+}
+
+.gallery-thumb-video {
+  position: relative;
+  background-color: #1a1a1f;
+}
+
+.thumb-play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* Project info panel */
