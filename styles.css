@@ -263,6 +263,18 @@ body {
   color: #fff;
 }
 
+.btn-white {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.btn-white:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
 /* ── Sections ── */
 .section {
   max-width: 1400px;
