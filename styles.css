@@ -330,6 +330,7 @@ body {
 .project-gallery {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 4px;
   padding: 4px;
   background: #0e0e11;
@@ -337,6 +338,8 @@ body {
 
 .gallery-main {
   position: relative;
+  flex: none;
+  width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 8px;
   overflow: hidden;
@@ -366,8 +369,9 @@ video.main-image {
 .gallery-thumbs {
   display: flex;
   flex-direction: row;
+  flex: 1 1 72px;
+  max-height: 160px;
   gap: 4px;
-  height: 72px;
 }
 
 .gallery-thumb {
@@ -668,7 +672,7 @@ video.main-image {
   }
 
   .gallery-thumbs {
-    height: 56px;
+    flex-basis: 56px;
   }
 
   .project-info {

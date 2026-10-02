@@ -265,9 +265,74 @@
       line-height: 1.7;
     }
 
+    .moh-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .moh-gallery img {
+      flex: 1 1 calc(33.333% - 0.667rem);
+      min-width: 0;
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .moh-gallery img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .lightbox.open {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      object-fit: contain;
+      cursor: default;
+      animation: lightboxFadeIn 0.3s ease;
+    }
+    @keyframes lightboxFadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2.5rem;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .lightbox-close:hover {
+      opacity: 1;
+    }
+
     @media (max-width: 768px) {
       .project-hero { padding: 6rem 1.5rem 2rem; }
       .project-body { padding: 0 1.5rem 4rem; }
+      .moh-gallery img { flex-basis: calc(50% - 0.5rem); }
       .card-slideshow { flex-direction: column; }
       .card-slide-img { flex: none; }
       .core-loop-wrapper { width: 300px; height: 300px; }
@@ -295,20 +360,21 @@
 
   <div class="project-hero">
     <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
-    <span class="project-tag">Game Design</span>
-    <span class="project-tag">Production</span>
+    <div class="project-tags" style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+      <span class="project-tag">Game Design</span>
+      <span class="project-tag">Production</span>
+    </div>
     <h1>Masterworks of Horror</h1>
     <p class="project-role" style="color: var(--text); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Co-Lead Game Designer</p>
     <p class="lead">Masterworks of Horror is a realtime card battler focused on in depth cards that are inspired by horror authors from the past.</p>
     <p style="color: var(--text-muted); font-size: 1.125rem; margin-bottom: 1rem;"><strong style="color: var(--text);">Tools Used:</strong> Unity, Jira, Perforce, Github, Figma</p>
     <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-      <a href="https://store.steampowered.com/app/4436720/Masterworks_of_Horror_The_Prologue/" class="btn btn-primary" target="_blank" rel="noopener">Steam Page</a>
+      <a href="https://masterworks-of-horror.itch.io/masterworks-of-horror-the-prologue" class="btn btn-primary" target="_blank" rel="noopener">Itch.io Page</a>
       <a href="https://www.masterworksgame.com/" class="btn btn-white" target="_blank" rel="noopener">Official Website</a>
     </div>
     <div class="trailer-wrapper" style="position: relative; width: 100%; border-radius: 12px; overflow: hidden; cursor: pointer;" onclick="playTrailer(this)">
-      <video class="project-cover" preload="metadata" style="width: 100%; border-radius: 12px; display: block;">
-        <source src="../Resources/Masterworks%20of%20Horror/Gdc%20Trailer%20V3.1.mp4#t=2" type="video/mp4">
-        <source src="../Resources/Masterworks%20of%20Horror/GDC%20Trailer%20V3.1.mov" type="video/quicktime">
+      <video class="project-cover" preload="metadata" poster="../Resources/Masterworks%20of%20Horror/itch-trailer-first-frame.jpg" style="width: 100%; border-radius: 12px; display: block;">
+        <source src="../Resources/Masterworks%20of%20Horror/Masterworks%20of%20Horror%20The%20Prologue%20%20itch.io%20Launch%20Trailer.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="trailer-play-btn" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); transition: background 0.3s;">
@@ -452,6 +518,21 @@
         </div>
       </div>
     </div>
+
+    <h2>Gallery</h2>
+    <div class="moh-gallery">
+      <img src="../Resources/Masterworks%20of%20Horror/Core%20Loop/MOH_Adapt_Strategy.gif" alt="Masterworks of Horror" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/Masterworks%20of%20Horror/Screenshot%201.png" alt="Masterworks of Horror" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/Masterworks%20of%20Horror/Choose%20Your%20Author.png" alt="Masterworks of Horror" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/Masterworks%20of%20Horror/Craft%20Your%20Masterwork.png" alt="Masterworks of Horror" onclick="openLightbox(this.src)" style="cursor: pointer;">
+      <img src="../Resources/Masterworks%20of%20Horror/Card%20Viewer%20Gif.gif" alt="Masterworks of Horror" onclick="openLightbox(this.src)" style="cursor: pointer;">
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <img id="lightbox-img" src="" alt="Gallery image">
   </div>
 
   <footer class="footer">
@@ -459,6 +540,26 @@
   </footer>
 
   <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target === document.getElementById('lightbox') || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
     const stepData = [
       { title: "Play Cards", desc: "Place cards from your hand onto the board. Depending on the style of your play you can pressure your opponent, control the board, or other strategies that promote your victory.", img: "../Resources/Masterworks%20of%20Horror/Core%20Loop/MOH_Play_Card.gif" },
       { title: "Assess Board", desc: "Read the current state of the board. Evaluate your position, resource totals, and the threats your opponent has established.", img: "../Resources/Masterworks%20of%20Horror/Core%20Loop/MOH_Assess_Board.gif" },

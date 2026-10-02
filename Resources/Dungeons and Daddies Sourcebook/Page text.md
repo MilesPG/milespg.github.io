@@ -1,7 +1,7 @@
 Mission Designer/Writer
 "Dungeons and Daddies: Not a BDSM Sourcebook" is a Dungeons & Dragons 5E compatible compendium.
 
-Tools Used: Google Suite, Zoom meetings, Excel Sheets
+Tools Used: Google Suite, Zoom Meetings, Excel Sheets
 
 LINK TO PROJECT: [TBD](https://www.backerkit.com/c/projects/rocketjump/dungeons-and-daddies-not-a-bdsm-sourcebook)
 
@@ -10,11 +10,11 @@ Dungeons and Daddies is an award-winning Dungeons & Dragons podcast that started
 
 Using the dice-rolling framework of the classic tabletop role-playing game Dungeons & Dragons, it tells the story of four suburban dads from our world flung into a world of fantasy and magic in a quest to rescue their lost sons.
 
-"Dungeons and Daddies: Not a BDSM Sourcebook" is a Dungeons and Dragons 5E compatible book containing brand new classes, items, adventures, and much more from the podcast's adventures.
+"Dungeons and Daddies: Not a BDSM Sourcebook" is a Dungeons and Dragons 5E compatible book containing brand new classes, items, adventures, and much more from the podcasts' adventures.
 
 My Role
 
-As Mission Designer/Writer, I am responsible for collaborating with managers and podcast cast members to ensure that we provide our existing fans with on brand content while also allowing new potential fans to experience our unique brand of comedy and humor.
+As Mission Designer/Writer, I am responsible for collaborating with managers and podcast cast members to ensure that we provide our existing fans with on brand content while also allowing new potential fans to experience our unique brand of comedy and humor through fun missions and interesting locations to explore!
 
 Responsibilities
 
@@ -26,6 +26,5 @@ Collaborative Review - Worked with managers and cast members to validate that ne
 
 Mechanic Creation - designed original game mechanics from scratch to support encounters and location exploration within the existing 5E ruleset.
 
-Challenges
 
-TBD
+DISCLAIMER: This project is currently in production. Because it has not been full released, I am unable to share any additonal details, images, or specifics beyond what is shown here. This page will be fully updated once the project is released.
