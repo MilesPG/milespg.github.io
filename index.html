@@ -54,14 +54,22 @@
 
     <div class="project-list">
 
-      <!-- Project 4 -->
-      <div class="project-card">
+      <!-- Project 4 (hidden for now, not ready to show) -->
+      <div class="project-card is-hidden">
         <div class="project-gallery">
           <div class="gallery-main">
-            <div class="main-image active" style="background-image: url('Resources/Placeholder/coming-soon.svg');"></div>
+            <video class="main-image active" muted loop playsinline autoplay preload="auto">
+              <source src="Resources/Only%20Fights/Fall%202026%20Pre-Alpha%20Trailer%20V3.mp4" type="video/mp4">
+            </video>
+            <div class="main-image" style="background-image: url('Resources/Only%20Fights/Logo_big.png');"></div>
+            <div class="main-image" style="background-image: url('Resources/Only%20Fights/Convert%20to%20GIF%20project%20-%20October%2002%2C%202026%20at%2015.37.30.gif');"></div>
           </div>
           <div class="gallery-thumbs">
-            <button class="gallery-thumb active" data-img="0" style="background-image: url('Resources/Placeholder/coming-soon.svg');"></button>
+            <button class="gallery-thumb gallery-thumb-video active" data-img="0" style="background-image: url('Resources/Only%20Fights/trailer-first-frame.jpg');">
+              <span class="thumb-play-icon">&#9654;</span>
+            </button>
+            <button class="gallery-thumb" data-img="1" style="background-image: url('Resources/Only%20Fights/Logo_big.png');"></button>
+            <button class="gallery-thumb" data-img="2" style="background-image: url('Resources/Only%20Fights/Convert%20to%20GIF%20project%20-%20October%2002%2C%202026%20at%2015.37.30.gif');"></button>
           </div>
         </div>
         <div class="project-info">
