@@ -73,6 +73,11 @@ document.querySelectorAll('.project-gallery').forEach(gallery => {
   });
 });
 
+// ── Kick off autoplay videos (HTML autoplay attribute is unreliable) ──
+document.querySelectorAll('video.main-image.active').forEach(video => {
+  video.play().catch(() => {});
+});
+
 // ── Navbar background on scroll ──
 const navbar = document.querySelector('.navbar');
 
