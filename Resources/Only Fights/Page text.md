@@ -10,7 +10,7 @@ Only Fights is a 1-2 player co-op beat 'em up where you play as starting out soc
 
 My Role
 
-As Creative Director, I am responsible for not only the direction of the game's content, but also act as the leader for a team of 20+ indivduals, all working on a volunteer basis. Leading meetings, delegating tasks, and keeping my team motivated has been a truly rewarding experience. 
+As Creative Director, I am responsible for not only the direction of the game's content, but also act as the leader for a team of 20+ individuals, all working on a volunteer basis. Leading meetings, delegating tasks, and keeping my team motivated has been a truly rewarding experience. 
 
 I have been fortunate enough to work with some truly talented and remarkable people during my time as Creative Director of Only Fights and I am proud of every team member on the project!
 
